@@ -1,0 +1,10 @@
+# Script to copy the 'ui.png' image to the FTP server every 60 seconds
+
+cd /home/pi/thermostat
+
+while true
+do
+	curl -T ramdisk/ui.png ftp://<ftpserver> --user <user>:<password> >ramdisk/curl.out 2>&1
+	sleep 60
+done
+

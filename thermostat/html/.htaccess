@@ -1,0 +1,2 @@
+# Disable caching of images to allow refresh of UI image
+Header set Cache-Control "max-age=0, must-revalidate"
